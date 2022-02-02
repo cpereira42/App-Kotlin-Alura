@@ -28,11 +28,6 @@ class DetailFragment : Fragment() {
 
         arguments?.let {
             dogUuid = DetailFragmentArgs.fromBundle(it).dogUuid
-            textView4.text = dogUuid.toString()
-        }
-        buttonList.setOnClickListener{
-            val action = DetailFragmentDirections.actionDetailFragment()
-            Navigation.findNavController(it).navigate(action)
         }
     }
 }
