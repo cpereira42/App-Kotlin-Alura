@@ -2,6 +2,7 @@ package com.example.dogs.util
 
 import android.content.Context
 import android.widget.ImageView
+import androidx.databinding.BindingAdapter
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -24,3 +25,10 @@ fun ImageView.loadImage(uri : String?, progressDrawable: CircularProgressDrawabl
         .load(uri)
         .into(this)
 }
+
+// aula 48
+@BindingAdapter ("android:imageURL")
+fun loadImage(view: ImageView, url: String?){
+    view.loadImage(url, getProgressDrawable(view.context))
+}
+
