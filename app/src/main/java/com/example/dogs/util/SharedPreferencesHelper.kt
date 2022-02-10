@@ -31,4 +31,7 @@ class SharedPreferencesHelper {
             putLong(PREFE_TIME, time)
         }
     }
+
+    // aula 59
+    fun getCacheDuration() = prefs?.getString("pref_cache_duration", "")
 }
